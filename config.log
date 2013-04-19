@@ -216,7 +216,7 @@ configure:4182: $? = 0
 configure:4255: gcc -o conftest -g -O2   conftest.c -lpython2.7 -lcrypto -lorcon -lpthread -lpcre -lpcap -lnet  >&5
 configure:4255: $? = 0
 configure:4255: ./conftest
-./configure: line 1571:  1877 Segmentation fault      ./conftest$ac_exeext
+./configure: line 1571:  3426 Segmentation fault      ./conftest$ac_exeext
 configure:4255: $? = 139
 configure: program exited with status 139
 configure: failed program was:
@@ -421,7 +421,7 @@ configure:4498: checking for GNU libc compatible malloc
 configure:4522: gcc -o conftest -g -O2   conftest.c -lpython2.7 -lcrypto -lorcon -lpthread -lpcre -lpcap -lnet  >&5
 configure:4522: $? = 0
 configure:4522: ./conftest
-./configure: line 1571:  2362 Segmentation fault      ./conftest$ac_exeext
+./configure: line 1571:  3800 Segmentation fault      ./conftest$ac_exeext
 configure:4522: $? = 139
 configure: program exited with status 139
 configure: failed program was:
@@ -490,7 +490,7 @@ configure:4555: $? = 0
 configure:4555: result: yes
 configure:4561: checking for _doprnt
 configure:4561: gcc -o conftest -g -O2   conftest.c -lpython2.7 -lcrypto -lorcon -lpthread -lpcre -lpcap -lnet  >&5
-/tmp/cc2w1WA1.o: In function `main':
+/tmp/ccbWp3ze.o: In function `main':
 /home/morfeo/airpwn/conftest.c:80: undefined reference to `_doprnt'
 collect2: error: ld returned 1 exit status
 configure:4561: $? = 1
@@ -606,6 +606,7 @@ on m0rf30-lap
 
 config.status:869: creating Makefile
 config.status:869: creating config.h
+config.status:1044: config.h is unchanged
 config.status:1091: executing depfiles commands
 
 ## ---------------- ##

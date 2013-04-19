@@ -13,7 +13,7 @@ AC_CHECK_LIB(pcap, pcap_open_live, [], AC_MSG_ERROR(libpcap required))
 AC_CHECK_LIB(pcre, pcre_compile, [], AC_MSG_ERROR(libpcre required))
 AC_CHECK_LIB(pthread, pthread_create, [], AC_MSG_ERROR(libpthread required))
 AC_CHECK_LIB(orcon, tx80211_txpacket, [], AC_MSG_ERROR(LORCON required. Install LORCON before building airpwn.))
-AC_CHECK_LIB(ssl, MD5_Init, [], AC_MSG_NOTICE(openssl required for full WEP key generation))
+AC_CHECK_LIB(crypto, MD5_Init, [], AC_MSG_NOTICE(openssl required for full WEP key generation))
 AC_CHECK_LIB(python2.7, PyString_FromString, [], AC_MSG_NOTICE(Python2.7 required))
 
 # Checks for header files.
