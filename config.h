@@ -35,7 +35,7 @@
 #define HAVE_LIBPYTHON2_7 1
 
 /* Define to 1 if you have the `ssl' library (-lssl). */
-/* #undef HAVE_LIBSSL */
+#define HAVE_LIBSSL 1
 
 /* Define to 1 if your system has a GNU libc compatible `malloc' function, and
    to 0 otherwise. */
@@ -109,6 +109,9 @@
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "airpwn"
+
+/* Define to the home page for this package. */
+#define PACKAGE_URL ""
 
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "1.4"
