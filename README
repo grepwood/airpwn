@@ -21,7 +21,7 @@ Prerequisites:
   * libpcap (www.tcpdump.org)
   * libnet (www.packetfactory.net/libnet)
   * libpcre (www.pcre.org)
-  * lorcon (provided in the lorcon-current.tgz archive)
+  * lorcon (https://github.com/M0Rf30/lorcon-old)
   * openssl (www.openssl.org) (only needed for the keygen)
 
 How airpwn works:
