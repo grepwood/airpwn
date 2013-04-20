@@ -41,7 +41,7 @@ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure AUTHORS COPYING ChangeLog INSTALL NEWS \
 	depcomp install-sh missing
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/configure.ac
+# am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
@@ -231,6 +231,26 @@ install-sbinPROGRAMS: $(sbin_PROGRAMS)
 	   $(INSTALL_PROGRAM_ENV) $(sbinPROGRAMS_INSTALL) "$$p" "$(DESTDIR)$(sbindir)/$$f" || exit 1; \
 	  else :; fi; \
 	done
+
+airpwn-data:
+	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/airpwn
+	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/airpwn/conf
+	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/airpwn/content
+	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/airpwn/pyscripts
+	for i in `ls conf`; do \
+ 		$(INSTALL) -m 644 conf/$$i $(DESTDIR)$(datadir)/airpwn/conf/; \
+		true; \
+	done;
+
+	for i in `ls content`; do \
+		$(INSTALL) -m 644 content/$$i $(DESTDIR)$(datadir)/airpwn/content/; \
+		true; \
+	done;
+	
+	for i in `ls pyscripts`; do \
+		$(INSTALL) -m 644 pyscripts/$$i $(DESTDIR)$(datadir)/airpwn/pyscripts/; \
+		true; \
+	done;
 
 uninstall-sbinPROGRAMS:
 	@$(NORMAL_UNINSTALL)
@@ -546,7 +566,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-man
+install-data-am: install-man airpwn-data
 
 install-exec-am: install-sbinPROGRAMS
 
