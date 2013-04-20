@@ -238,6 +238,7 @@ airpwn-data:
 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/airpwn/content
 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/airpwn/pyscripts
 	for i in `ls conf`; do \
+		sed -i 's#datadir#$(datadir)#g' conf/$$i; \
  		$(INSTALL) -m 644 conf/$$i $(DESTDIR)$(datadir)/airpwn/conf/; \
 		true; \
 	done;
