@@ -1,4 +1,4 @@
 begin greet_html
 match ^(GET|POST)
 ignore ^GET [^ ?]+\.(jpg|jpeg|gif|png|tif|tiff)
-response datadir/content/greet_html
+response datadir/airpwn/content/greet_html
