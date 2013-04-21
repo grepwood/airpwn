@@ -34,7 +34,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-sbin_PROGRAMS = airpwn$(EXEEXT) wep_keygen$(EXEEXT)
+sbin_PROGRAMS = airpwn$(EXEEXT) wep_keygen$(EXEEXT) mac80211_prep.sh madwifing_prep.sh madwifiold_prep.sh
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/config.h.in \

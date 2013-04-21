@@ -1,4 +1,4 @@
-#
+#!/bin/sh
 # Script to prepare an interface for monitoring/packet injection using the
 # madwifi-ng drivers
 #
