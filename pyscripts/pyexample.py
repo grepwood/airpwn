@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 #
 # Demo python module to illustrate airpwn python integration.
 # the TCP data payload is sent as input to airpwn_response, and the data
